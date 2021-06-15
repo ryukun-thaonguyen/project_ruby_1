@@ -1,0 +1,25 @@
+<div class="container-from">
+    <div class="col-md-6 col-md-offset-3 form-group form">
+      <h3><%= t('start.signup_tit') %></h3>
+      <%= form_for [:auth,@user] do |f| %>
+        <%= render 'shared/error_messages' %>
+        <%= f.text_field :name,class: "form-control input", placeholder: "your name" %>
+        <%= f.email_field :email,class: "form-control input",placeholder: "your email" %>
+        <%= f.password_field :password,class: "form-control input", placeholder: "password" %>
+        <%= f.password_field :password_confirmation,class: "form-control input",placeholder: "password confirm"  %>
+        <div class="form-check form-rd">
+          <%= f.radio_button :role, true, class: 'form-check-input' %>
+          <h5 class="form-check-label ">
+            <%= t('start.sigup_txt') %>
+          </h5>
+        </div>
+        <div class="form-check form-rd">
+            <%= f.radio_button :role, false, class: 'form-check-input' %>
+          <h5 class="form-check-label">
+            <%= t('start.sigup_txt2') %>
+          </h5>
+        </div>
+        <%= f.submit t('start.signup_tit'), class: "btn btn-primary submit" %>
+      <% end %>
+    </div>
+</div>

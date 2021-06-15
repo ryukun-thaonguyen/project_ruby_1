@@ -1,0 +1,40 @@
+<%= render 'layouts/modal_create_course' if current_user.role %>
+<nav class="sidebar sidebar-offcanvas " id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="#" class="nav-link">
+        <div class="nav-profile-image">
+          <%= gravatar_for current_user %>
+          <span class="login-status online"></span>
+        </div>
+        <div class="nav-profile-text d-flex flex-column">
+          <span class="font-weight-bold mb-2">
+            <%= current_user.name %>
+          </span>
+          <span class="text-secondary text-small">
+            <%= user_type %>
+          </span>
+        </div>
+        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <span class="menu-title">Home</span>
+        <i class="mdi mdi-home menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item sidebar-actions">
+      <span class="nav-link">
+        <div class="border-bottom">
+          <h6 class="font-weight-normal mb-3">Courses</h6>
+        </div>
+        <% if current_user.role %>
+          <button class="btn btn-block btn-lg btn-gradient-primary mt-4" data-toggle="modal" data-target="#createCourse">
+          + Add a course"
+          </button>
+        <% end %>
+      </span>
+    </li>
+  </ul>
+</nav>

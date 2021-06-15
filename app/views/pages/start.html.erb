@@ -1,0 +1,41 @@
+<% provide(:title, t(:base_title)) %>
+<div class="container">
+  <%= render "header-start" %>
+  <div class="row start-main">
+      <div class="col-6">
+          <div class="col-content">
+            <h1 class="h1-heading-text">
+              <%= t('start.heading_txt') %>
+            <br>
+              <%= t('start.heading_txt2') %>
+            <h1>
+          <div class="fl-col-group">
+              <div class="fl-col">
+                  <h3 class="h3-heading-text">
+                    <%= t('start.sigup_txt') %>
+                  </h3>
+                  <p class="p-text">
+                    <%= t :txt %>
+                  </p>
+                  <%= link_to t('start.start_signup'), new_auth_user_path, class: "btn btn-success" %>
+              </div>
+              <div class="fl-col">
+                  <h3 class="h3-heading-text">
+                    <%= t('start.sigup_txt2') %>
+                  </h3>
+                  <p class="p-text">
+                    <%= t :txt %>
+                  </p>
+                    <%= link_to t('start.start_signup2'), new_auth_user_path, class: "btn btn-outline-success" %>
+              </div>
+          </div>
+          </div>
+      </div>
+      <div class="col-6">
+          <div class="img-thum">
+            <%= image_tag "start.png", class: 'start-img' %>
+          </div>
+      </div>
+  </div>
+</div>
+<%= render "footer-start" %>

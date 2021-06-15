@@ -1,0 +1,32 @@
+<div class="container mt-5 mb-3">
+    <div class="row">
+      <% @courses.each do |i| %>
+        <div class="col-md-4">
+          <div class="card p-3 mb-2">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row align-items-center">
+                <div class="nav-profile-img pr-img">
+                  <%= gravatar_for(i.user,"img-profile")%>
+                </div>
+                <div class="ms-2 c-details">
+                  <h4 class="mb-0">
+                    <%= i.user.name %>
+                  </h4>
+                  <span>
+                    <%= i.start_date %>
+                  </span>
+                </div>
+              </div>
+              <div class="badge"> <span> <%= i.user_courses.size %> trainees</span> </div>
+            </div>
+            <div class="mt-5">
+                <h3 class="heading"> <%= i.name %> <br></h3>
+                <div class="mt-5">
+                  <%= link_to 'View', course_path(i), class: 'btn btn-primary' %>
+                </div>
+              </div>
+            </div>
+         </div>
+      <% end %>
+    </div>
+</div>

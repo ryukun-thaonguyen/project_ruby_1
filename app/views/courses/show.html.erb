@@ -1,0 +1,5 @@
+<% if current_user.role %>
+  <%= render 'show_courses' %>
+<% else %>
+  <%= render 'show_user_courses' %>
+<% end %>

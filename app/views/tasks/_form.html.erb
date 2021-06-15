@@ -1,0 +1,10 @@
+<h3><%= t('home.create_task_t') %></h3>
+<%= form_for Task.new do |f| %>
+    <%=f.hidden_field :course_id, value: course_id %>
+    <%= f.text_field :title, class: 'form-control', placeholder: "Task's title" %>
+    <h5 class="f-title"><%= t('home.description_t') %></h5>
+    <%= f.rich_text_area :description, class: 'form-control customized-min-height' %>
+    <h5 class="f-title"><%= t('home.dueDate_t') %></h5>
+    <%= f.datetime_local_field  :due_date ,class: "form-control form-i" %>
+    <%= f.submit t('home.create_task_t'), class: "btn btn-primary submit" %>
+<% end %>
