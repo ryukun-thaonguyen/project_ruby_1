@@ -1,0 +1,8 @@
+/*
+ *= require bootstrap
+ *= require css/vendor.bundle.base.css
+ *= require mdi/css/materialdesignicons.min.css
+ *= require css/style.css
+ *= require_tree .
+ *= require_self
+ */

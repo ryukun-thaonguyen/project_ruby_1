@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <div class="list-wrapper">
+      <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
+        <% user_tasks.each do |i| %>
+            <li class="">
+            <div class="form-check">
+              <label class="form-check-label">
+               <%= link_to task_path(i) do %>
+                    <% if i.status %>
+                      <input class="checkbox" type="checkbox" checked><%= i.title %> <i class="input-helper"></i>
+                    <% else %>
+                      <input class="checkbox" type="checkbox" disabled> <%= i.title %> <i class="input-helper"></i>
+                    <% end %>
+                  <% end %>
+              </label>
+              <%= i.due_date %>
+            </div>
+           </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

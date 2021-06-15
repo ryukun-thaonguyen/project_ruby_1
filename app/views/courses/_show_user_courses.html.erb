@@ -1,0 +1,39 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-12 stretch-card grid-margin">
+    <div class="card  card-img-holder  t-center card-full-size">
+      <div class="card-body">
+        <h1 class="font-weight-normal mb-3">
+          <%= @user_courses.name %>
+        </h1>
+      </div>
+      <div class="card-footer card-full-size">
+        <h5 class="mb-5">
+          <%= simple_format(@user_courses.course.description) %>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="card t-center card-full-size">
+      <div class="card-body">
+        <div class="nav">
+          <div class="nav-item">
+            <a href='/courses/<%= @user_courses.course.id %>/add-people'>
+              <span class="menu-title">People</span>
+              <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+      <h3 class="f-title">Task list</h3>
+      <%= render partial: 'tasks/task_list', locals: { user_tasks: @user_courses.course.tasks } %>
+    </div>
+  </div>
+</div>
+<div>

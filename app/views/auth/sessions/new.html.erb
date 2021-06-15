@@ -1,0 +1,14 @@
+<div class="container-from">
+    <div class="col-md-6 col-md-offset-3 form-group form">
+      <h3><%= t('start.login_tit') %></h3>
+      <%= form_for(:session, url: auth_login_path) do |f| %>
+              <%= f.email_field :email,class: "form-control input",placeholder: t('start.email_f') %>
+              <%= f.password_field :password,class: "form-control input", placeholder: t('start.pasword_f') %>
+              <%= f.label :remember_me, class: "checkbox inline" do %>
+                  <%= f.check_box :remember_me %>
+                  <span><%= t('start.rem_t') %></span>
+              <% end %>
+              <%= f.submit t('start.login_tit'), class: "btn btn-primary submit" %>
+      <% end %>
+    </div>
+</div>

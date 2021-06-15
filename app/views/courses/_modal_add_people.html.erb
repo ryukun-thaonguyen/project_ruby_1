@@ -1,0 +1,12 @@
+<div id="addPeople" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+        <%= form_with url: "/courses/#{@course.id}/add-people", method: :post do |form| %>
+          <%= form.text_field :email, class: 'form-control form-i', placeholder: "user's email" %>
+          <%= form.submit "add", class: 'btn btn-primary submit' %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+</div>

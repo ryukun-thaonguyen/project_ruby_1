@@ -1,0 +1,83 @@
+.page{
+    background-image: linear-gradient(to bottom, #fff 0%, #f3f7f7 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+}
+.site{
+    margin-top: 40px;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+.start-main{
+    margin-top: 10%;
+}
+.start-img{
+  width: 700px;
+}
+.logo{
+    width: 90px;
+    height: 90px;
+}
+.col-content{
+    margin-top: 20%;
+}
+.h1-heading-text{
+    font-size: 40.001px;
+    letter-spacing: -0.013em;
+    font-family: "Open Sans", sans-serif;
+    color: #738f93;
+}
+.h3-heading-text{
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: -0.013em;
+    font-family: "Open Sans", sans-serif;
+}
+.p-text{ 
+    font-size: 18px;
+    color: #738f93;
+}
+.fl-col-group{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    margin-top: 10%;
+}
+.footer-text{
+    font-size: 0.923em;
+    color: #576871;
+}
+.container-from{
+    width: 350px;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 6px 16px 0 #738f93;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    margin: 20px auto;
+    width: 300px;
+}
+.submit{
+    float: right;
+}
+.form-rd{
+  align-self: center;
+  margin-left: 20px;
+}

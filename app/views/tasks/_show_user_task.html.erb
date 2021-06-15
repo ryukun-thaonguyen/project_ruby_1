@@ -1,0 +1,35 @@
+<div class="container">
+  <div class = "row">
+    <div class = "col-md-9">
+      <div class="card">
+        <div class="card-header">
+          <h3>
+            <i class="mdi mdi-calendar-text"></i>
+            <%= @task.title %>
+          </h3>
+          <p>
+            <%= @task.created_at %>
+          </p>
+        </div>
+        <div class="card-body">
+          <%= @task.description %>
+        </div>
+      </div>
+    </div>
+    <div class = "col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="c-d">
+            <h4>Your work</h4>
+            <% if @task.user_tasks.select{|e| e.user_id == current_user.id}[0].status %>
+              <span>Finished</span>
+            <% else %>
+              <span>Assiged</span>
+              <%= link_to 'Mark as finish', finish_task_path, method: :put, class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<% if current_user.role %>
+  <%= render 'show_task' %>
+<% else %>
+  <%= render 'show_user_task' %>
+<% end %>

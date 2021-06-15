@@ -1,0 +1,37 @@
+.task-item{
+  margin-top: 30px;
+}
+.f-title{
+  margin-top: 30px;
+}
+trix-editor {
+  &.customized-min-height {
+    min-height: 15em;
+    height: auto;
+  }
+}
+.c-d{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.r-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.pr{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-bottom: .0625rem solid #e0e0e0;
+}
+.pr-img{
+  width: 40px;
+  border-radius: 50%;
+}
+.pr-name{
+  margin-left: 30px;
+}

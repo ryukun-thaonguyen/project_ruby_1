@@ -1,0 +1,6 @@
+home
+<% if current_user.role %>
+  <%= render 'courses/courses' %>
+<% else %>
+  <%= render 'courses/user_courses' %>
+<% end %>
